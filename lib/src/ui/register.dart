@@ -17,95 +17,101 @@ class _RegisterWidgetState extends State<RegisterWidget> {
     return Scaffold(
       body: Padding(
           padding: const EdgeInsets.all(10),
-          child: ListView(
-            children: <Widget>[
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
               Container(
                   alignment: Alignment.center,
                   padding: const EdgeInsets.all(10),
                   child: const Text(
-                    'Register User',
+                    '',
                     style: TextStyle(
                         color: Colors.blue,
                         fontWeight: FontWeight.w500,
                         fontSize: 30),
                   )),
-              Container(
-                  alignment: Alignment.center,
-                  padding: const EdgeInsets.all(10),
-                  child: const Text(
-                    'Register',
-                    style: TextStyle(fontSize: 20),
-                  )),
-              Container(
-                padding: const EdgeInsets.all(10),
-                child: TextField(
-                  controller: nameController,
-                  decoration: const InputDecoration(
-                    border: OutlineInputBorder(),
-                    labelText: 'User Name',
-                  ),
-                ),
-              ),
-              Container(
-                padding: const EdgeInsets.all(10),
-                child: TextField(
-                  obscureText: true,
-                  controller: passwordController,
-                  decoration: const InputDecoration(
-                    border: OutlineInputBorder(),
-                    labelText: 'Password',
-                  ),
-                ),
-              ),
-              Container(
-                padding: const EdgeInsets.all(10),
-                child: TextField(
-                  obscureText: true,
-                  controller: trypasswordController,
-                  decoration: const InputDecoration(
-                    border: OutlineInputBorder(),
-                    labelText: 'Try Password',
-                  ),
-                ),
-              ),
-              TextButton(
-                onPressed: () {
-                  //forgot password screen
-                },
-                child: const Text(
-                  'Forgot Password',
-                ),
-              ),
-              Container(
-                  height: 50,
-                  padding: const EdgeInsets.fromLTRB(10, 0, 10, 0),
-                  child: ElevatedButton(
-                    child: const Text('Submit'),
-                    onPressed: () {
-                      print(nameController.text);
-                      print(passwordController.text);
-                      print(trypasswordController.text);
-                    },
-                  )),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: <Widget>[
-                  const Text('Does not have account?'),
-                  TextButton(
-                    child: const Text(
-                      'Sign in',
-                      style: TextStyle(fontSize: 20),
+              Column(
+                children: [
+                  Container(
+                      alignment: Alignment.center,
+                      padding: const EdgeInsets.all(10),
+                      child: const Text(
+                        'Register User',
+                        style: TextStyle(
+                            color: Colors.blue,
+                            fontWeight: FontWeight.w500,
+                            fontSize: 30),
+                      )),
+                  Container(
+                    padding: const EdgeInsets.all(10),
+                    child: TextField(
+                      controller: nameController,
+                      decoration: const InputDecoration(
+                        border: OutlineInputBorder(),
+                        labelText: 'User Name',
+                      ),
                     ),
-                    onPressed: () {
-                      //signup screen
-                    },
-                  )
+                  ),
+                  Container(
+                    padding: const EdgeInsets.all(10),
+                    child: TextField(
+                      obscureText: true,
+                      controller: passwordController,
+                      decoration: const InputDecoration(
+                        border: OutlineInputBorder(),
+                        labelText: 'Password',
+                      ),
+                    ),
+                  ),
+                  Container(
+                    padding: const EdgeInsets.all(10),
+                    child: TextField(
+                      obscureText: true,
+                      controller: trypasswordController,
+                      decoration: const InputDecoration(
+                        border: OutlineInputBorder(),
+                        labelText: 'Try Password',
+                      ),
+                    ),
+                  ),
+                  Container(
+                      height: 50,
+                      padding: const EdgeInsets.fromLTRB(10, 0, 10, 0),
+                      child: ElevatedButton(
+                        child: const Text(
+                          'Submit',
+                          style: TextStyle(fontSize: 25),
+                        ),
+                        onPressed: () {
+                          print(nameController.text);
+                          print(passwordController.text);
+                          print(trypasswordController.text);
+                        },
+                      )),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: <Widget>[
+                      const Text('Does not have account?'),
+                      TextButton(
+                        child: const Text(
+                          'Sign in',
+                          style: TextStyle(fontSize: 20),
+                        ),
+                        onPressed: () {
+                          Navigator.of(context).pushNamed("/");
+                          print("link to Register");
+                          //signup screen
+                        },
+                      )
+                    ],
+                  ),
                 ],
               ),
               Container(
                 alignment: Alignment.center,
                 child: const Text("Develop Loc"),
-              )
+              ),
             ],
           )),
     );
