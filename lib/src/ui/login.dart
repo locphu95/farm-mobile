@@ -66,6 +66,8 @@ class _LoginWidgetState extends State<LoginWidget> {
                 ),
                 TextButton(
                   onPressed: () {
+                    Navigator.of(context).pushNamed("/forgot-password");
+                    print("link to Forgot Password");
                     //forgot password screen
                   },
                   child: const Text('Forgot Password',

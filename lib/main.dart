@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import 'src/ui/forgotpasswork.dart';
 import 'src/ui/login.dart';
 import 'src/ui/register.dart';
 
@@ -31,6 +32,7 @@ class MyApp extends StatelessWidget {
       routes: {
         '/': (context) => const LoginWidget(),
         '/register': (context) => const RegisterWidget(),
+        '/forgot-password': (context) => const ForgotPasswordWidget(),
       },
     );
   }
