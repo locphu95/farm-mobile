@@ -88,9 +88,7 @@ class _RegisterWidgetState extends State<RegisterWidget> {
                           print(passwordController.text);
                           print(trypasswordController.text);
                         },
-                      )),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
+                      )),git
                     children: <Widget>[
                       const Text('Does not have account?'),
                       TextButton(
