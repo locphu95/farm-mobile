@@ -53,27 +53,11 @@ class _ForgotPasswordWidgetState extends State<ForgotPasswordWidget> {
                     ),
                   ),
                 ),
-                Container(
-                  padding: const EdgeInsets.fromLTRB(10, 10, 10, 0),
-                  child: TextField(
-                    obscureText: true,
-                    controller: passwordController,
-                    decoration: const InputDecoration(
-                      border: OutlineInputBorder(),
-                      labelText: 'Password',
-                    ),
-                  ),
-                ),
-                TextButton(
-                  onPressed: () {
-                    //forgot password screen
-                  },
-                  child: const Text('Forgot Password',
-                      style: TextStyle(fontSize: 20)),
-                ),
+
+
                 ElevatedButton(
                   child: const Text(
-                    'Login',
+                    'Submit',
                     style: TextStyle(fontSize: 25),
                   ),
                   onPressed: () {

@@ -89,7 +89,7 @@ class _LoginWidgetState extends State<LoginWidget> {
                     const Text('Does not have account?'),
                     TextButton(
                       child: const Text(
-                        'Sign in',
+                        'Register',
                         style: TextStyle(fontSize: 20),
                       ),
                       onPressed: () {
