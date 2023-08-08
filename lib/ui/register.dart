@@ -99,7 +99,7 @@ class _RegisterWidgetState extends State<RegisterWidget> {
                           style: TextStyle(fontSize: 20),
                         ),
                         onPressed: () {
-                          Navigator.of(context).pushNamed("/");
+                          Navigator.of(context).pushNamed("/login");
                           print("link to Register");
                           //signup screen
                         },

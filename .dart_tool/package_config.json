@@ -3,13 +3,13 @@
   "packages": [
     {
       "name": "_fe_analyzer_shared",
-      "rootUri": "file:///Users/crpin95/.pub-cache/hosted/pub.dev/_fe_analyzer_shared-62.0.0",
+      "rootUri": "file:///Users/crpin95/.pub-cache/hosted/pub.dev/_fe_analyzer_shared-63.0.0",
       "packageUri": "lib/",
       "languageVersion": "3.0"
     },
     {
       "name": "analyzer",
-      "rootUri": "file:///Users/crpin95/.pub-cache/hosted/pub.dev/analyzer-6.0.0",
+      "rootUri": "file:///Users/crpin95/.pub-cache/hosted/pub.dev/analyzer-6.1.0",
       "packageUri": "lib/",
       "languageVersion": "3.0"
     },
@@ -92,12 +92,6 @@
       "languageVersion": "2.12"
     },
     {
-      "name": "dart_internal",
-      "rootUri": "file:///Users/crpin95/.pub-cache/hosted/pub.dev/dart_internal-0.2.9",
-      "packageUri": "lib/",
-      "languageVersion": "2.12"
-    },
-    {
       "name": "dart_style",
       "rootUri": "file:///Users/crpin95/.pub-cache/hosted/pub.dev/dart_style-2.3.2",
       "packageUri": "lib/",
@@ -105,7 +99,7 @@
     },
     {
       "name": "dio",
-      "rootUri": "file:///Users/crpin95/.pub-cache/hosted/pub.dev/dio-5.3.1",
+      "rootUri": "file:///Users/crpin95/.pub-cache/hosted/pub.dev/dio-5.3.2",
       "packageUri": "lib/",
       "languageVersion": "2.15"
     },
@@ -144,6 +138,12 @@
       "rootUri": "file:///Users/crpin95/.pub-cache/hosted/pub.dev/flutter_lints-2.0.2",
       "packageUri": "lib/",
       "languageVersion": "2.18"
+    },
+    {
+      "name": "flutter_localizations",
+      "rootUri": "file:///Users/crpin95/Documents/flutter/packages/flutter_localizations",
+      "packageUri": "lib/",
+      "languageVersion": "3.0"
     },
     {
       "name": "flutter_mobx",
@@ -198,6 +198,12 @@
       "rootUri": "file:///Users/crpin95/.pub-cache/hosted/pub.dev/idb_shim-2.3.1",
       "packageUri": "lib/",
       "languageVersion": "2.18"
+    },
+    {
+      "name": "intl",
+      "rootUri": "file:///Users/crpin95/.pub-cache/hosted/pub.dev/intl-0.18.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
     },
     {
       "name": "js",
@@ -279,31 +285,31 @@
     },
     {
       "name": "path_provider_android",
-      "rootUri": "file:///Users/crpin95/.pub-cache/hosted/pub.dev/path_provider_android-2.0.27",
+      "rootUri": "file:///Users/crpin95/.pub-cache/hosted/pub.dev/path_provider_android-2.1.0",
       "packageUri": "lib/",
-      "languageVersion": "2.17"
+      "languageVersion": "2.18"
     },
     {
       "name": "path_provider_foundation",
-      "rootUri": "file:///Users/crpin95/.pub-cache/hosted/pub.dev/path_provider_foundation-2.2.4",
+      "rootUri": "file:///Users/crpin95/.pub-cache/hosted/pub.dev/path_provider_foundation-2.3.0",
       "packageUri": "lib/",
       "languageVersion": "2.18"
     },
     {
       "name": "path_provider_linux",
-      "rootUri": "file:///Users/crpin95/.pub-cache/hosted/pub.dev/path_provider_linux-2.1.11",
+      "rootUri": "file:///Users/crpin95/.pub-cache/hosted/pub.dev/path_provider_linux-2.2.0",
       "packageUri": "lib/",
       "languageVersion": "2.18"
     },
     {
       "name": "path_provider_platform_interface",
-      "rootUri": "file:///Users/crpin95/.pub-cache/hosted/pub.dev/path_provider_platform_interface-2.0.6",
+      "rootUri": "file:///Users/crpin95/.pub-cache/hosted/pub.dev/path_provider_platform_interface-2.1.0",
       "packageUri": "lib/",
-      "languageVersion": "2.12"
+      "languageVersion": "2.18"
     },
     {
       "name": "path_provider_windows",
-      "rootUri": "file:///Users/crpin95/.pub-cache/hosted/pub.dev/path_provider_windows-2.1.7",
+      "rootUri": "file:///Users/crpin95/.pub-cache/hosted/pub.dev/path_provider_windows-2.2.0",
       "packageUri": "lib/",
       "languageVersion": "2.18"
     },
@@ -500,7 +506,7 @@
       "languageVersion": "2.19"
     }
   ],
-  "generated": "2023-08-02T01:44:08.752777Z",
+  "generated": "2023-08-06T15:59:07.174443Z",
   "generator": "pub",
   "generatorVersion": "3.0.6"
 }

@@ -1,12 +1,17 @@
 import 'package:farm_mobile/constants/app_theme.dart';
 import 'package:farm_mobile/constants/strings.dart';
 import 'package:farm_mobile/di/service_locator.dart';
+import 'package:farm_mobile/presentation/home/store/language/language_store.dart';
+import 'package:farm_mobile/presentation/home/store/theme/theme_store.dart';
+import 'package:farm_mobile/presentation/login/store/login_store.dart';
 import 'package:farm_mobile/ui/login.dart';
 import 'package:farm_mobile/ui/register.dart';
 import 'package:farm_mobile/utils/locale/app_localization.dart';
 import 'package:farm_mobile/utils/routes/routes.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_mobx/flutter_mobx.dart';
+import 'package:flutter_localizations/flutter_localizations.dart';
+
 
 class MyApp extends StatelessWidget {
   // This widget is the root of your application.
@@ -32,7 +37,7 @@ class MyApp extends StatelessWidget {
           supportedLocales: _languageStore.supportedLanguages
               .map((language) => Locale(language.locale, language.code))
               .toList(),
-          localizationsDelegates: [
+          localizationsDelegates: const [
             // A class which loads the translations from JSON files
             AppLocalizations.delegate,
             // Built-in localization of basic text for Material widgets
@@ -42,7 +47,7 @@ class MyApp extends StatelessWidget {
             // Built-in localization of basic text for Cupertino widgets
             GlobalCupertinoLocalizations.delegate,
           ],
-          home: _userStore.isLoggedIn ? const LoginWidget() : const RegisterWidget(),
+          home: _userStore.isLoggedIn ? const LoginWidget() : const LoginWidget(),
         );
       },
     );

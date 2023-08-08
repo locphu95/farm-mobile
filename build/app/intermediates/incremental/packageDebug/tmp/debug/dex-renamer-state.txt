@@ -1,4 +1,0 @@
-#Wed Jul 26 22:19:40 ICT 2023
-base.0=E\:\\Soucre\\farm-mobile\\build\\app\\intermediates\\dex\\debug\\mergeDexDebug\\classes.dex
-path.0=classes.dex
-renamed.0=classes.dex
