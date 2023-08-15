@@ -1,3 +1,5 @@
+import 'package:farm_mobile/core/widgets/base_auth_widget.dart';
+import 'package:farm_mobile/core/widgets/button_widget.dart';
 import 'package:flutter/material.dart';
 
 class ForgotPasswordWidget extends StatefulWidget {
@@ -13,85 +15,84 @@ class _ForgotPasswordWidgetState extends State<ForgotPasswordWidget> {
 
   @override
   Widget build(BuildContext context) {
+    var size = MediaQuery.of(context).size;
+    double imageSize;
+    if (MediaQuery.of(context).orientation == Orientation.portrait) {
+      imageSize = (size.width * 0.6);
+    } else {
+      imageSize = (size.height * 0.4);
+    }
     return Scaffold(
-      body: Padding(
-        padding: const EdgeInsets.all(10.0),
-        child: Column(
+      body: Stack(
+        children: [Column(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          crossAxisAlignment: CrossAxisAlignment.center,
+          mainAxisSize: MainAxisSize.min,
           children: [
-            Container(
-                alignment: Alignment.center,
-                padding: const EdgeInsets.all(10),
-                child: const Text(
-                  '',
-                  style: TextStyle(
-                      color: Colors.blue,
-                      fontWeight: FontWeight.w500,
-                      fontSize: 30),
-                )),
-            Column(
-              mainAxisAlignment: MainAxisAlignment.spaceAround,
-              children: [
-                Container(
-                    alignment: Alignment.center,
-                    padding: const EdgeInsets.all(10),
-                    child: const Text(
-                      'Forgot Password',
-                      style: TextStyle(
-                          color: Colors.blue,
-                          fontWeight: FontWeight.w500,
-                          fontSize: 30),
-                    )),
-                Container(
-                  padding: const EdgeInsets.all(10),
-                  child: TextField(
-                    controller: nameController,
-                    decoration: const InputDecoration(
-                      border: OutlineInputBorder(),
-                      labelText: 'Email',
+            SizedBox(
+              // width: size.width,
+              height: imageSize,
+              child: const BaseScreenAuth(
+                  title: "Forgot Password", supTitle: "You’ll get messages soon on your e-mail address"),
+            ),
+            Container(                    padding: EdgeInsets.only(left: 15, right: 15,top:50),
+
+              child: Column(
+                children: [
+                  Container(
+                    padding: const EdgeInsets.only(bottom: 20),
+
+                    child: TextField(
+                      controller: nameController,
+                      decoration: InputDecoration(
+                        border: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(10),
+                        ),
+                        labelText: 'Email',
+                      ),
+                    ),
+                  ),Container(
+                    padding: const EdgeInsets.only(bottom: 20),
+
+                    child: ButtonTextCustom(
+                      nameButton: "Send",
+                      width: size.width,
+                      height: 60,
+                      fontSize: 25,
+                      fontSizeRadius: 30,
+                      backgroundColor: Colors.deepPurpleAccent,
+                      function: () {
+                        print(nameController.text);
+                      },
                     ),
                   ),
-                ),
-
-
-                ElevatedButton(
-                  child: const Text(
-                    'Submit',
-                    style: TextStyle(fontSize: 25),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: <Widget>[
+                      const Text('Does not have account?'),
+                      TextButton(
+                        child: const Text(
+                          'Sign in',
+                          style: TextStyle(fontSize: 20),
+                        ),
+                        onPressed: () {
+                          Navigator.of(context).pushNamed("/register");
+                          print("link to Register");
+                          //signup screen
+                        },
+                      )
+                    ],
                   ),
-                  onPressed: () {
-                    print(nameController.text);
-                    print(passwordController.text);
-                  },
-                ),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: <Widget>[
-                    const Text('Does not have account?'),
-                    TextButton(
-                      child: const Text(
-                        'Sign in',
-                        style: TextStyle(fontSize: 20),
-                      ),
-                      onPressed: () {
-                        Navigator.of(context).pushNamed("/register");
-                        print("link to Register");
-                        //signup screen
-                      },
-                    )
-                  ],
-                ),
-              ],
+                ],
+              ),
             ),
 
-            Container(
-              alignment: Alignment.bottomCenter,
-              //  padding: const EdgeInsets.all(10),
-              child: const Text("Develop Loc"),
-            ),
+
           ],
-        ),
+        ), const Positioned(
+          top: 50,
+          left: 20,
+          child: ButtonIconCustom(),
+        ),]
       ),
     );
   }
