@@ -67,7 +67,7 @@ class _LoginWidgetState extends State<LoginWidget> {
                       ),
                     ),
                     Container(
-                      padding: const EdgeInsets.only(bottom: 20),
+                      padding: const EdgeInsets.only(bottom: 10),
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
