@@ -17,9 +17,11 @@ class LoginResponse extends BaseRequest {
 }
 
 class LoginRequest extends BaseRequest {
+
   String userName;
   String password;
   LoginRequest({required this.userName, required this.password});
+
   Map<String, dynamic> toMap() => {
         "userName": userName,
         "password": password,

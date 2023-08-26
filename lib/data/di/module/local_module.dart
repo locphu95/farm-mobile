@@ -33,5 +33,9 @@ mixin LocalModule {
     // data sources:------------------------------------------------------------
     getIt.registerSingleton(
         PostDataSource(await getIt.getAsync<SembastClient>()));
+
+
+    getIt.registerSingleton(
+        PostDataSource(await getIt.getAsync<SembastClient>()));
   }
 }
